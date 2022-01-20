@@ -5,7 +5,7 @@ body {
 
 /*ЭКРАН №2*/
 .container__two {
-    display: none;
+    /*display: none;*/
 }
 
 /*ВОПРОС*/
@@ -30,6 +30,7 @@ body {
     border-radius: 15px;
     font-size: 22px;
     font-family: SFProRegular;
+    display: none;
 }
 
 .question__text {
