@@ -8,11 +8,12 @@
 </head>
 
 <body>
-
+<div id="outQuestion"></div>
+<!--    ЭКРАН 1 -->
 <div class="container">
-
     <header class="title">Today</header>
 
+    <!--длинная строчка-->
     <div class="text__flex">
 
         <div class="checkbox">
@@ -24,10 +25,18 @@
             Very very long text in English.
         </div>
 
-            <button class="trash__btn trash__position" ></button>
+            <button class="trash__btn trash__position" id="trashOn" ></button>
+
+        <div class="create__today__position">
+            <button class="create__today__btn">
+                <div class="create__today__text">
+                    +
+                </div>
+            </button>
+        </div>
 
     </div>
-
+    <!--короткая строчка-->
     <div class="text__flex">
 
         <div class="checkbox">
@@ -42,49 +51,44 @@
         <button class="trash__btn trash__position" ></button>
 
     </div>
-
-    <div class="create__today__position">
-        <button class="create__today__btn">
-            <div class="create__today__text">
-                +
-            </div>
-        </button>
-    </div>
-
 </div>
 
-<div class="container__cover">
-    <div class="container__question">
-        <div class="question__text">
-            Вы действительно хотите удалить задачу?
-        </div>
-        <div >
-            <button class="question__btn__yes">
-                Да
-            </button>
-            <button class="question__btn__no">
-                Нет
-            </button>
-        </div>
-    </div>
-</div>
+<!--    ЭКРАН ВОПРОС-->
+<!--<div class="container__cover">-->
+<!--    <div class="container__question">-->
+<!--        <div class="question__text">-->
+<!--            Вы действительно хотите удалить задачу?-->
+<!--        </div>-->
+<!--        <div >-->
+<!--            <button class="question__btn__yes">-->
+<!--                Да-->
+<!--            </button>-->
+<!--            <button class="question__btn__no">-->
+<!--                Нет-->
+<!--            </button>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 
-<div class="container__two">
-    <div>
-        <button>
+<!--    ЭКРАН 2-->
+<div class="container__new">
+    <div class="btn__position">
+        <button class="container__btn">
             Cancel
         </button>
-        <button>
+        <button class="container__btn">
             Done
         </button>
     </div>
-    <div>
+    <div class="checkboxNew_position">
         <div class="checkbox">
             <input class="checkbox__input" type="checkbox" id="checkbox_3">
             <label class="checkbox__label" for="checkbox_3"></label>
         </div>
+        <p class="container__New__input"><input class="container__New__position" size="22" placeholder="What do you want to do?"></p>
     </div>
 </div>
 
+<script src="script.js"></script>
 </body>
 </html>
