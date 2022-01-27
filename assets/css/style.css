@@ -8,9 +8,10 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+    z-index: 1;
 }
-.container__none {
-    display: none;
+.display-none{
+   display: none;
 }
 .title {
     margin-top: 5%;
@@ -124,7 +125,7 @@ body {
     width:100%;
     height:100%;
     background: rgba(21, 35, 56, 0.16);
-    z-index: 10;
+    z-index: 2;
 }
 .container-card {
     padding-top: 5%;
@@ -158,7 +159,7 @@ body {
 /*КАРТОЧКА С ВОПРОСОМ*/
 
 /*ЭКРАН №2 СОЗДАНИЕ НОВОЙ ЗАДАЧИ*/
-.container-task-new {
+.task-new {
     font-family: SFProRegular;
     position: absolute;
     width:100%;
@@ -189,7 +190,7 @@ body {
 }
 .text-input {
     width: 250px;
-    padding-top: 1%;
+    padding-top: 2%;
     border: solid 0;
 }
 /*ЭКРАН №2 СОЗДАНИЕ НОВОЙ ЗАДАЧИ*/

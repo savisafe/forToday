@@ -9,7 +9,7 @@
 
 <body>
 <!--    ЭКРАН 1 -->
-<div class="container">
+<div class="container" id="container">
     <header class="title">Today</header>
 
     <!--длинная строчка-->
@@ -24,7 +24,7 @@
             Very very long text in English.
         </div>
 
-        <button class="btn-delete btn-delete-position" id="trashOn" ></button>
+        <button class="btn-delete btn-delete-position" id="trash" ></button>
 
         <div class="add-task" >
             <button class="add-task-btn" id="addTask">
@@ -38,7 +38,7 @@
 </div>
 
 <!-- КАРТОЧКА С ВОПРОСОМ -->
-<div class="cover">
+<div class="cover display-none" id="cover">
     <div class="container-card">
         <div>
             Вы действительно хотите удалить задачу?
@@ -47,7 +47,7 @@
             <button class="btn-card">
                 Да
             </button>
-            <button class="btn-card">
+            <button class="btn-card" id="btn-card-no">
                 Нет
             </button>
         </div>
@@ -55,9 +55,9 @@
 </div>
 
 <!--    ЭКРАН 2-->
-<div class="container-task-new">
+<div class="task-new display-none" id="taskNew">
     <div class="container-btn">
-        <button class="btn-choice">
+        <button class="btn-choice" id="cancel">
             Cancel
         </button>
         <button class="btn-choice">
@@ -65,11 +65,11 @@
         </button>
     </div>
     <div class="container-checkbox-new-task">
-        <div class="checkbox">
-            <input class="checkbox__input" type="checkbox" id="checkbox_3">
-            <label class="checkbox__label" for="checkbox_3"></label>
+        <div class="checkbox-container">
+            <input class="checkbox-input" type="checkbox" id="">
+            <label class="checkbox-label" for="checkbox_1"></label>
         </div>
-        <p class="text-wrapper"><input class="text-input" size="22" placeholder="What do you want to do?"></p>
+        <p class="text-wrapper"><input class="text-input" placeholder="What do you want to do?"></p>
     </div>
 </div>
 
