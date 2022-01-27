@@ -3,123 +3,15 @@ body {
     padding: 0;
 }
 
-/*ЭКРАН №2 СОЗДАНИЕ НОВОЙ ЗАДАЧИ*/
-.container__new {
-    font-family: SFProRegular;
-    position: absolute;
-    width:100%;
-    height:100%;
-    z-index: 5;
-}
-
-.btn__position {
-    margin-top: 5%;
-    margin-left: 7%;
-    margin-right: 7%;
-    display: flex;
-    justify-content: space-between;
-    background: white;
-}
-
-.container__btn {
-    background: transparent;
-    color: #006CFF;
-    font-size: 22px;
-    border: solid 0;
-}
-
-.checkboxNew_position {
-    margin-left: 9%;
-    margin-right: 7%;
-}
-
-.container__New__input {
-    margin-top: 7%;
-    margin-left: 9%;
-}
-
-.container__New__position {
-    width: 250px;
-    padding-top: 1%;
-    border: solid 0;
-}
-
-/*ВОПРОС*/
-.container__cover {
-    position: absolute;
-    width:100%;
-    height:100%;
-    background: #ffffff;
-    z-index: 10;
-}
-
-.container__question {
-    padding-top: 5%;
-    display: block;
-    margin-top: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    width: 300px;
-    height: 150px;
-    background: #ffffff;
-    box-shadow: 0px 24px 32px rgba(21, 35, 56, 0.16);
-    border-radius: 15px;
-    font-size: 22px;
-    font-family: SFProRegular;
-}
-
-.question__text {
-    padding-top: 33px;
-}
-
-.question__btn__yes {
-    margin-right: 2%;
-    width: 50px;
-    height: 25px;
-    color: black;
-    border: 1px ridge rgba(0, 108, 255);
-    border-radius: 13px;
-    box-shadow: 0px 24px 32px rgba(21, 35, 56, 0.16);
-    background: #ffffff;
-}
-
-.question__btn__yes:active {
-    background: #006CFF;
-    color: white;
-}
-
-.question__btn__no {
-    margin-left: 2%;
-    width: 50px;
-    height: 25px;
-    color: white;
-    border: 1px ridge rgba(0, 108, 255);
-    border-radius: 13px;
-    box-shadow: 0px 24px 32px rgba(21, 35, 56, 0.16);
-    background: #006CFF;
-}
-
-.question__btn__no:active {
-    background: white;
-    color: black;
-}
-
-.containerBtn {
-    margin-top: 8%;
-}
-
 /*ЭКРАН №1*/
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
-
 .container__none {
     display: none;
 }
-
 .title {
     margin-top: 5%;
     margin-left: 12%;
@@ -127,27 +19,28 @@ body {
     font-family: SFProBold;
 }
 
+.task-container {
+    margin-top: 2%;
+    margin-left: 1%;
+    display: flex;
+}
 
-/*ЧЕКБОКС*/
-.checkbox {
+.checkbox-container {
     position: relative;
     margin-top: 3%;
 }
-.checkbox__input {
+.checkbox-input {
     appearance: none;
     position: absolute;
 }
-
-.checkbox__label {
+.checkbox-label {
 
 }
-
-.checkbox__input:checked + .checkbox__label:before {
+.checkbox-input:checked + .checkbox-label:before {
     background-color: #61DEA4;
     border-color: aqua;
 }
-
-.checkbox__label:before {
+.checkbox-label:before {
     position: absolute;
     top: 0;
     left: 0;
@@ -160,8 +53,7 @@ body {
     background-color: #ffffff;
     z-index: 1;
 }
-
-.checkbox__label:after {
+.checkbox-label:after {
     position: absolute;
     top: 0;
     left: 0;
@@ -173,8 +65,7 @@ body {
     z-index: 2;
 }
 
-/*ВЕРСТКА ТЕКСТА, КОРЗИНЫ*/
-.text__inner {
+.task-text {
     width: 300px;
     margin-top: 2.5%;
     margin-left: 10%;
@@ -183,38 +74,26 @@ body {
     font-family: SFProRegular;
 }
 
-.trash__position{
-    position: relative;
-    margin-top: 3%;
-    z-index: 3;
-    font-family: SFProRegular;
-}
-
-.trash__btn {
+.btn-delete {
     width: 24px;
     height: 24px;
     border: solid 0;
     background: url("delete-off.png");
     background-size: contain;
 }
-
-.trash__btn:active {
+.btn-delete:active {
     background: url("delete-on.png");
     background-size: contain;
 
 }
-
-
-.text__flex {
-    margin-top: 2%;
-    margin-left: 1%;
-    display: flex;
-
+.btn-delete-position{
+    position: relative;
+    margin-top: 3%;
+    z-index: 3;
+    font-family: SFProRegular;
 }
 
-
-/*ВЕРСТКА КНОПКИ + */
-.create__today__position {
+.add-task {
     margin: 0 auto;
     position: absolute;
     top: 89%;
@@ -222,8 +101,7 @@ body {
     z-index: 4;
     font-family: SFProRegular;
 }
-
-.create__today__btn {
+.add-task-btn {
     width: 64px;
     height: 64px;
     font-size: 35px;
@@ -233,12 +111,88 @@ body {
     box-shadow: 0px 24px 32px rgba(21, 35, 56, 0.16);
     background: #ffffff;
 }
-
-.create__today__btn:active {
+.add-task-btn:active {
     color: #ffffff;
     box-shadow: 0px 24px 32px rgba(21, 35, 56, 0.16);
     background: #006CFF;
 }
+/*ЭКРАН №1*/
+
+/*КАРТОЧКА С ВОПРОСОМ*/
+.cover {
+    position: absolute;
+    width:100%;
+    height:100%;
+    background: rgba(21, 35, 56, 0.16);
+    z-index: 10;
+}
+.container-card {
+    padding-top: 5%;
+    display: block;
+    margin-top: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 300px;
+    height: 150px;
+    background: #ffffff;
+    box-shadow: 0 24px 32px rgba(21, 35, 56, 0.16);
+    border-radius: 15px;
+    font-size: 22px;
+    font-family: SFProRegular;
+}
+.btn-card {
+    margin-right: 2%;
+    width: 50px;
+    height: 25px;
+    color: black;
+    border: 1px ridge rgba(0, 108, 255);
+    border-radius: 13px;
+    box-shadow: 0px 24px 32px rgba(21, 35, 56, 0.16);
+    background: #ffffff;
+}
+.btn-card:active {
+    background: #006CFF;
+    color: white;
+}
+/*КАРТОЧКА С ВОПРОСОМ*/
+
+/*ЭКРАН №2 СОЗДАНИЕ НОВОЙ ЗАДАЧИ*/
+.container-task-new {
+    font-family: SFProRegular;
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index: 5;
+}
+.container-btn {
+    margin-top: 5%;
+    margin-left: 7%;
+    margin-right: 7%;
+    display: flex;
+    justify-content: space-between;
+    background: white;
+}
+.btn-choice {
+    background: transparent;
+    color: #006CFF;
+    font-size: 22px;
+    border: solid 0;
+}
+.container-checkbox-new-task {
+    margin-left: 9%;
+    margin-right: 7%;
+}
+.text-wrapper {
+    margin-top: 7%;
+    margin-left: 9%;
+}
+.text-input {
+    width: 250px;
+    padding-top: 1%;
+    border: solid 0;
+}
+/*ЭКРАН №2 СОЗДАНИЕ НОВОЙ ЗАДАЧИ*/
 
 @font-face {
     font-family: SFProRegular;
