@@ -81,17 +81,15 @@ body {
     border: solid 0;
     background: url("delete-off.png");
     background-size: contain;
+    position: relative;
+    margin-top: 3%;
+    z-index: 3;
+    font-family: SFProRegular;
 }
 .btn-delete:active {
     background: url("delete-on.png");
     background-size: contain;
 
-}
-.btn-delete-position{
-    position: relative;
-    margin-top: 3%;
-    z-index: 3;
-    font-family: SFProRegular;
 }
 
 .add-task {
