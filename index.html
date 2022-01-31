@@ -12,27 +12,28 @@
 <div class="container" id="container">
     <header class="title">Today</header>
 
+    <div id="taskContainer"></div>
+
     <!--длинная строчка-->
-    <div class="task-container" id="taskDelete">
-        <div class="checkbox-container">
-            <input class="checkbox-input" type="checkbox" id="checkbox_1">
-            <label class="checkbox-label" for="checkbox_1" ></label>
-        </div>
+<!--    <div class="task-container">-->
+<!--        <div class="checkbox-container" id="taskDelete">-->
+<!--            <input class="checkbox-input" type="checkbox" id="checkbox_1">-->
+<!--            <label class="checkbox-label" for="checkbox_1" ></label>-->
+<!--        </div>-->
 
-        <div class="task-text" id="addClass">
-            Very very long text in English.
-        </div>
+<!--        <div class="task-text" id="addClass">-->
+<!--            Very very long text in English.-->
+<!--        </div>-->
 
-        <button class="btn-delete" id="trash" ></button>
+<!--        <button class="btn-delete" id="trash" ></button>-->
+<!--    </div>-->
 
-        <div class="add-task" >
-            <button class="add-task-btn" id="addTask">
-                <div>
-                    +
-                </div>
-            </button>
-        </div>
-
+    <div class="add-task" >
+        <button class="add-task-btn" id="addTask">
+            <div>
+                +
+            </div>
+        </button>
     </div>
 </div>
 
@@ -54,21 +55,27 @@
 </div>
 
 <!--    ЭКРАН 2-->
-<div class="task-new display-none" id="taskNew">
+<div class="task-new display-none" id="taskNewBtn">
     <div class="btn-container">
         <button class="btn-choice" id="cancel">
             Cancel
         </button>
-        <button class="btn-choice">
+        <button class="btn-choice" onclick="getTxt()" id="done">
             Done
         </button>
     </div>
     <div class="container-checkbox-new-task">
         <div class="checkbox-container">
-            <input class="checkbox-input" type="checkbox" id="">
-            <label class="checkbox-label" for="checkbox_1"></label>
+            <input class="checkbox-input" type="checkbox">
+            <label class="checkbox-label" ></label>
         </div>
-        <p class="text-wrapper"><input class="text-input" placeholder="What do you want to do?"></p>
+
+        <p class="text-wrapper">
+            <input class="text-input" placeholder="What do you want to do?" id="myText">
+        </p>
+
+
+
     </div>
 </div>
 
