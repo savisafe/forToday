@@ -172,7 +172,19 @@ body {
     justify-content: space-between;
     background: white;
 }
-.btn-choice {
+.btn-cancel {
+    background: transparent;
+    color: #006CFF;
+    font-size: 22px;
+    border: solid 0;
+}
+.btn-done-off {
+    background: transparent;
+    color: #dadada;
+    font-size: 22px;
+    border: solid 0;
+}
+.btn-done-on {
     background: transparent;
     color: #006CFF;
     font-size: 22px;

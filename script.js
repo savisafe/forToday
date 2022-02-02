@@ -1,6 +1,29 @@
 
 // СОЗДАНИЕ ЗАДАЧИ, ЭКРАН 2
 function getTxt() {
+
+    // КНОПКА "DONE"
+    function btnDone() {
+        const done = document.getElementById('done')
+        const inputCheck = document.querySelector('.text-input');
+        done.setAttribute('disabled', 'true')
+
+        if (inputCheck.value.length > 5) {
+            done.removeAttribute('disabled')
+            done.classList.remove('btn-done-off')
+            done.classList.add('btn-done-on')
+        }
+
+        done.addEventListener('click', () => {
+            const removeDisplay = document.getElementById('taskNewBtn')
+            removeDisplay.classList.add('display-none')
+            const addDisplay = document.getElementById('container')
+            addDisplay.classList.remove('display-none')
+            console.log(done)
+        })
+    }
+    btnDone()
+
     const value = document.getElementById('myText').value;
     const out = document.getElementById('taskContainer')
 
@@ -13,7 +36,7 @@ function getTxt() {
     const input = document.createElement('input')
     input.setAttribute('class', 'checkbox-container')
     input.setAttribute('type', 'checkbox')
-    input.setAttribute('id', 'checkbox_1') //как будет работать?????????????????
+    input.setAttribute('id', 'checkbox_1')
     const label = document.createElement('label')
     label.setAttribute('class', 'checkbox-label')
     label.setAttribute('for', 'checkbox_1')
@@ -21,7 +44,7 @@ function getTxt() {
 
     const taskText = document.createElement('div')
     taskText.setAttribute('class', 'task-text')
-    taskText.setAttribute('id', 'addClass') //как сюда добавить value????
+    taskText.setAttribute('id', 'addClass') //
     taskText.append(value)
 
     const btnDelete = document.createElement('button')
@@ -31,8 +54,6 @@ function getTxt() {
     taskContainer.append(checkboxContainer, taskText, btnDelete)
 
     out.append(taskContainer)
-
-    console.log(value);
 
     // КНОПКА КОРЗИНЫ
     const cover = document.getElementById('trash')
@@ -49,8 +70,41 @@ function getTxt() {
         const addClass = document.getElementById('addClass')
         addClass.classList.add('task-text-completed')
     })
-
 }
+
+// КНОПКА "CANCEL"
+const cancel = document.getElementById('cancel')
+cancel.addEventListener('click', () => {
+    const taskNew = document.getElementById('taskNewBtn')
+    taskNew.classList.add('display-none')
+    const container = document.getElementById('container')
+    container.classList.remove('display-none')
+})
+
+// КНОПКА "DONE"
+// function btnDone() {
+//     const done = document.getElementById('done')
+//     const inputCheck = document.querySelector('.text-input');
+//     done.setAttribute('disabled', 'true')
+//
+//     if (inputCheck.value.length > 5) {
+//         done.removeAttribute('disabled')
+//         done.classList.remove('btn-done-off')
+//         done.classList.add('btn-done-on')
+//     }
+//
+//     done.addEventListener('click', () => {
+//         const removeDisplay = document.getElementById('taskNewBtn')
+//         removeDisplay.classList.add('display-none')
+//         const addDisplay = document.getElementById('container')
+//         addDisplay.classList.remove('display-none')
+//         console.log(done)
+//     })
+// }
+
+
+
+// МОДАЛКА "ДА"
 
 // МОДАЛКА "НЕТ"
 const btnCard = document.getElementById('btn-card-no')
@@ -70,20 +124,5 @@ addTask.addEventListener('click', () => {
     taskNew.classList.remove('display-none')
 })
 
-// КНОПКА "CANCEL"
-const cancel = document.getElementById('cancel')
-cancel.addEventListener('click', () => {
-    const taskNew = document.getElementById('taskNewBtn')
-    taskNew.classList.add('display-none')
-    const container = document.getElementById('container')
-    container.classList.remove('display-none')
-})
 
-// КНОПКА "DONE"
-const done = document.getElementById('done')
-done.addEventListener('click', () => {
-    const removeDisplay = document.getElementById('taskNewBtn')
-    removeDisplay.classList.remove('task-new')
-    const addDisplay = document.getElementById('container')
-    addDisplay.classList.add('container')
-})
+
