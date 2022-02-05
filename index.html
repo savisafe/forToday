@@ -12,7 +12,7 @@
 <div class="container" id="container">
     <header class="title">Today</header>
 
-    <div id="taskContainer"></div>
+    <div id="tasksContainer"></div>
 
     <!--длинная строчка-->
 <!--    <div class="task-container">-->
@@ -44,10 +44,10 @@
             Вы действительно хотите удалить задачу?
         </div>
         <div >
-            <button class="btn-card">
+            <button class="btn-card" onclick="deleteTask()" id="task-delete-yes">
                 Да
             </button>
-            <button class="btn-card" id="btn-card-no">
+            <button class="btn-card" id="task-delete-no">
                 Нет
             </button>
         </div>
@@ -60,13 +60,13 @@
         <button class="btn-cancel" id="cancel">
             Cancel
         </button>
-        <button class="btn-done-off" onclick="getTxt()" id="done">
+        <button class="btn-done-off" onclick="onClickDone()" id="done">
             Done
         </button>
     </div>
     <div class="container-checkbox-new-task">
         <div class="checkbox-container">
-            <input class="checkbox-input" type="checkbox">
+            <input class="checkbox-input" id="input" type="checkbox">
             <label class="checkbox-label" ></label>
         </div>
 
