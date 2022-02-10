@@ -85,9 +85,9 @@ function renderTask() {
         taskText.setAttribute('class','task-text')
         taskText.append(item.value)
         const modalWinDelete = document.createElement('button')
-        task.append(modalWinDelete)
         modalWinDelete.setAttribute('class', 'btn-delete')
         modalWinDelete.setAttribute('id', 'trash_'+item.id)
+        task.append(modalWinDelete)
         out.append(task)
 
         // МОДАЛЬНОЕ ОКНО УДАЛЕНИЕ ЗАДАЧ
@@ -114,19 +114,15 @@ function renderTask() {
                     if(a!==item.id)
                     return true;
                 })
-                btnDeleteYes.addEventListener('click',()=>{
-                        // РЕНДЕР ДЛЯ УДАЛЕНИЯ ЗАДАЧИ
-                        tasks.forEach(item=>{
-                            task.classList.remove('task-container')
-                            checkboxContainer.classList.remove( 'checkbox-container')
-                            input.classList.remove( 'checkbox-input')
-                            input.removeAttribute( 'checkbox')
-                            label.classList.remove( 'checkbox-label')
-                            label.classList.remove('checkbox_' + item.id)
-                            taskText.classList.remove('task-text')
-                            modalWinDelete.classList.remove( 'btn-delete')
-                            modalWinDelete.classList.remove('trash_' + item.id)
-                        })
+
+                // РЕНДЕР ДЛЯ УДАЛЕНИЯ ЗАДАЧИ
+                tasks.forEach(item=>{
+                    task.remove() //удаляет целый див с задачей с ЭКРАНА 1
+
+                    const cover = document.getElementById('cover')
+                    cover.classList.add('display-none')
+                    const container = document.getElementById('container')
+                    container.classList.remove('display-none')
                 })
 
                 console.log(tasks) //проверка массива
@@ -141,22 +137,3 @@ function onClickDone (){
     createTask()
     renderTask()
 }
-
-// УДАЛЕНИЕ ЗАДАЧИ
-// function deleteTask() {
-//     tasks.forEach(item => {
-//         const index = tasks.indexOf(item, 0)
-//         if (index !== -1) {
-//             tasks.splice(index)
-//             console.log(tasks)
-//         }
-//
-//         const btnYes = document.getElementById('task-delete-yes')
-//         btnYes.addEventListener('click',()=>{
-//             const cover = document.getElementById('cover')
-//             cover.classList.add('display-none')
-//             const container = document.getElementById('container')
-//             container.classList.remove('display-none')
-//         })
-//     })
-// }
