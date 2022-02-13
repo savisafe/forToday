@@ -14,20 +14,6 @@
 
     <div id="tasksContainer"></div>
 
-    <!--длинная строчка-->
-<!--    <div class="task-container">-->
-<!--        <div class="checkbox-container" id="taskDelete">-->
-<!--            <input class="checkbox-input" type="checkbox" id="checkbox_1">-->
-<!--            <label class="checkbox-label" for="checkbox_1" ></label>-->
-<!--        </div>-->
-
-<!--        <div class="task-text" id="addClass">-->
-<!--            Very very long text in English.-->
-<!--        </div>-->
-
-<!--        <button class="btn-delete" id="trash" ></button>-->
-<!--    </div>-->
-
     <div class="add-task" >
         <button class="add-task-btn" id="btn-to-go-second-display">
             <div>
@@ -44,7 +30,7 @@
             Вы действительно хотите удалить задачу?
         </div>
         <div >
-            <button class="btn-card" id="task-delete-yes">
+            <button class="btn-card" onclick="deleteTask()" id="task-delete-yes">
                 Да
             </button>
             <button class="btn-card" id="task-delete-no">

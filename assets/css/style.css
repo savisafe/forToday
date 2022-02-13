@@ -7,13 +7,14 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    /*padding: 0 15px;*/
     z-index: 1;
 }
 .display-none{
    display: none;
 }
 .title {
+    max-width: 1200px;
     margin-top: 5%;
     margin-left: 12%;
     font-size: 41px;
@@ -75,7 +76,24 @@ body {
     text-decoration-line: line-through;
     color: #dadada;
 }
+.btn-change{
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+    border: solid 0;
+    background: url("change-off.png");
+    background-size: contain;
+    position: relative;
+    margin-top: 3%;
+    z-index: 3;
+    font-family: SFProRegular;
+}
+.btn-change:active{
+    background: url("change-on.png");
+    background-size: contain;
+}
 .btn-delete {
+    margin-right: 10px;
     width: 24px;
     height: 24px;
     border: solid 0;
@@ -210,19 +228,7 @@ body {
     font-size: 22px;
     font-family: SFProRegular;
 }
-.btn-save-task{
-    width: 24px;
-    height: 24px;
-    border: solid 0;
-    background: url("save-off.png");
-    background-size: contain;
-    position: relative;
-    margin-top: 3%;
-}
-.btn-save-task:active {
-    background: url("save-on.png");
-    background-size: contain;
-}
+
 /*ЭКРАН №2 СОЗДАНИЕ НОВОЙ ЗАДАЧИ*/
 
 @font-face {
